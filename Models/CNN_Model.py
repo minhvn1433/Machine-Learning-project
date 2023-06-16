@@ -28,3 +28,9 @@ class Model():
         )
 
         self.model.summary()
+    
+    def fit(self, data, epochs=10, verbose=2):
+        return self.model.fit(data, epochs=epochs, verbose=verbose)
+    
+    def evaluate(self, data):
+        return self.model.evaluate(data)
