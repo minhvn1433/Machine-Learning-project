@@ -2,7 +2,7 @@ import tensorflow as tf
 import parameter
 
 class Model():
-    def __init__(self):
+    def __init__(self, num_classes):
         self.model = tf.keras.Sequential(
             [
                 tf.keras.layers.InputLayer((parameter.IMAGE_SIZE, parameter.IMAGE_SIZE, 3)),
@@ -15,8 +15,8 @@ class Model():
                 tf.keras.layers.Dropout(0.1),
                 tf.keras.layers.Conv2D(128, (3, 3), activation='relu'),
                 tf.keras.layers.Flatten(),
-                tf.keras.layers.Dense(64, activation='relu'),
-                tf.keras.layers.Dense(10),
+                tf.keras.layers.Dense(num_classes*4, activation='relu'),
+                tf.keras.layers.Dense(num_classes),
             ], name='my_model'
         )
         

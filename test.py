@@ -1,3 +1,3 @@
-import parameter
+import Models.InceptionV3_PT
 
-print(parameter.datadir)
+model = Models.InceptionV3_PT.Model(10)
