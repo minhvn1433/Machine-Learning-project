@@ -1,1 +1,17 @@
-*Move model and training part to Models folder
+I) Introduction:
+I.1) What is image classification:
+I.2) Which dataset that we use and what they are:
+
+II) Models:
+II.1) Simple Model: (Random forest, etc)
+II.2) Modern Model: (Resnet, etc)
+II.3) CNN Model: 
+II.3.1) Hyperparameter tuning (Dropout rate, batch normalization, learning rate, etc)
+
+III) Evaluation:
+III.1) Evaluation metric:
+III.2) Result:
+
+IV) Conclusion:
+
+Reference
