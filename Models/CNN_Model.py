@@ -23,7 +23,7 @@ class Model():
 
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-            optimizer=tf.keras.optimizers.Adam(3e-4),
+            optimizer=tf.keras.optimizers.legacy.Adam(3e-4),
             metrics=['accuracy'],
         )
 

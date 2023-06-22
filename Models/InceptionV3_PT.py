@@ -16,8 +16,8 @@ class Model():
             layer.trainable = False
         
         inp = keras.layers.Input(shape=(parameter.IMAGE_SIZE, parameter.IMAGE_SIZE, 3))
-        inp = keras.layers.Resizing(128, 128)(inp)
-        x = self.PT_model(inp)
+        inp2 = keras.layers.Resizing(128, 128)(inp)
+        x = self.PT_model(inp2)
         x = keras.layers.Flatten()(x)
         x = keras.layers.Dense(num_classes*4, activation='relu')(x)
         x = keras.layers.Dropout(Incep_dp_rate_01)(x)
@@ -27,7 +27,7 @@ class Model():
 
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-            optimizer=tf.keras.optimizers.Adam(3e-4),
+            optimizer=tf.keras.optimizers.legacy.Adam(3e-4),
             metrics=['accuracy'],
         )
 
