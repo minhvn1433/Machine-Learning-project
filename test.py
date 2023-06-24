@@ -1,3 +1,6 @@
-import Models.InceptionV3_PT
+import Models.VGG_16_PT
+import parameter
 
-model = Models.InceptionV3_PT.Model(10)
+model = Models.VGG_16_PT.Model(parameter.numclasses)
+
+model.fit()
