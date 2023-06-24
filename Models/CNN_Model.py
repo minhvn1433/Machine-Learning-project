@@ -16,14 +16,14 @@ class Model():
                 tf.keras.layers.Conv2D(128, (3, 3), activation='relu'),
                 tf.keras.layers.Flatten(),
                 tf.keras.layers.Dense(num_classes*4, activation='relu'),
-                tf.keras.layers.Dense(num_classes),
-            ], name='my_model'
+                tf.keras.layers.Dense(num_classes, activation='softmax'),
+            ], name='my_basic_CNN_Model'
         )
         
 
         self.model.compile(
-            loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-            optimizer=tf.keras.optimizers.legacy.Adam(3e-4),
+            loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+            optimizer=tf.keras.optimizers.legacy.Adam(parameter.LEARNING_RATE),
             metrics=['accuracy'],
         )
 

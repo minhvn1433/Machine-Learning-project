@@ -7,3 +7,4 @@ numclasses = 10
 CONV_DO_RATE = 0.1 #[0.05, 0.1, 0.3, 0.5]
 LINEAR_DO_RATE = 0.1 #[0.05, 0.1, 0.3, 0.5]
 
+LEARNING_RATE = 3e-4
