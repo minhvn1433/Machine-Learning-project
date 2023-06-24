@@ -3,7 +3,6 @@ from tensorflow import keras
 from keras.applications.inception_v3 import InceptionV3
 import parameter
 
-Incep_dp_rate_01 = 0.1
 
 class Model():
     def __init__(self, num_classes):
@@ -20,7 +19,7 @@ class Model():
         x = self.PT_model(inp2)
         x = keras.layers.Flatten()(x)
         x = keras.layers.Dense(num_classes*4, activation='relu')(x)
-        x = keras.layers.Dropout(Incep_dp_rate_01)(x)
+        x = keras.layers.Dropout(parameter.LINEAR_DO_RATE)(x)
         x = keras.layers.Dense(num_classes, activation='softmax')(x)
         
         self.model = keras.models.Model(inp, x)
