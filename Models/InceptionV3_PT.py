@@ -22,7 +22,7 @@ class Model():
         x = keras.layers.Dropout(parameter.LINEAR_DO_RATE)(x)
         x = keras.layers.Dense(num_classes, activation='softmax')(x)
         
-        self.model = keras.models.Model(inp, x)
+        self.model = keras.models.Model(inp, x, name='InceptionV3_PT')
 
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(),

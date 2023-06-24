@@ -17,7 +17,7 @@ class Model():
                 tf.keras.layers.Flatten(),
                 tf.keras.layers.Dense(num_classes*4, activation='relu'),
                 tf.keras.layers.Dense(num_classes, activation='softmax'),
-            ], name='my_basic_CNN_Model'
+            ], name='CNN_Model'
         )
         
 
@@ -28,7 +28,7 @@ class Model():
         )
 
         self.model.summary()
-    
+        
     def fit(self, *args, **kwarg):
         return self.model.fit(*args, **kwarg)
     

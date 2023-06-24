@@ -20,7 +20,7 @@ class Model():
         x = keras.layers.Dropout(VGG16_dp_rate_01)(x)
         x = keras.layers.Dense(num_classes, activation='softmax')(x)
         
-        self.model = keras.models.Model(self.PT_model.input, x)
+        self.model = keras.models.Model(self.PT_model.input, x, name='VGG_16_PT')
 
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(),
