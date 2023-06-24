@@ -30,8 +30,8 @@ class Model():
 
         self.model.summary()
     
-    def fit(self, data, validation_data, epochs=10, verbose=2):
-        return self.model.fit(data, epochs=epochs, validation_data=validation_data, verbose=verbose)
+    def fit(self, *args, **kwarg):
+        return self.model.fit(*args, **kwarg)
     
     def evaluate(self, data):
         return self.model.evaluate(data)

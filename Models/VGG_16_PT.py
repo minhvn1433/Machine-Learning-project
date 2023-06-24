@@ -30,8 +30,8 @@ class Model():
 
         self.model.summary()
     
-    def fit(self, *args):
-        return self.model.fit(args)
+    def fit(self, *args, **kwarg):
+        return self.model.fit(*args, **kwarg)
     
     def evaluate(self, data):
         return self.model.evaluate(data)
