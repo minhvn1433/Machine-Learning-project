@@ -25,7 +25,7 @@ class Model():
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(),
             optimizer=tf.keras.optimizers.legacy.Adam(parameter.LEARNING_RATE),
-            metrics=['accuracy'],
+            metrics=['recall'],
         )
 
         self.model.summary()
