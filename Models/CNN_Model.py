@@ -33,3 +33,6 @@ class Model():
     def fit(self, *args, **kwarg):
         return self.model.fit(*args, **kwarg)
     
+    def evaluate(self, *args, **kwarg):
+        return self.model.evaluate(*args, **kwarg)
+    
