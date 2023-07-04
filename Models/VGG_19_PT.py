@@ -20,12 +20,12 @@ class Model():
         x = keras.layers.Dropout(VGG19_dp_rate_01)(x)
         x = keras.layers.Dense(num_classes, activation='softmax')(x)
         
-        self.model = keras.models.Model(self.PT_model.input, x, name='VGG_16_PT')
+        self.model = keras.models.Model(self.PT_model.input, x, name='VGG_19_PT')
 
         self.model.compile(
             loss=tf.keras.losses.SparseCategoricalCrossentropy(),
             optimizer=tf.keras.optimizers.legacy.Adam(parameter.LEARNING_RATE),
-            metrics=['recall'],
+            metrics=['accuracy'],
         )
 
         self.model.summary()
