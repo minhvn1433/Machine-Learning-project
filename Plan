@@ -14,3 +14,10 @@ III.2) Result:
 IV) Conclusion:
 
 Reference
+
+parameter pt
+
+VGG_16
+dropout_rate insignificant change, 0.3 best performent
+learning_rate
+decay
