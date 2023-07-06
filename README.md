@@ -137,10 +137,14 @@ Python interpreter to store compiled cache files.
 - /main.ipynb: This file is used to run code sections, present results,
 and create explanatory documentation for the project.
 
+- /plan: This file can be used for note-taking, defining the project plan, and organizing tasks in the image classification project. It provides an overview of the important components of the project, including models, hyperparameters, evaluation, and conclusions. It also provides information about the "parameter.py" file and specific parameters for the VGG_16 model.
+
 - /parameter.py: This file contains parameters and configurations for
 the project. Through this file, you can define values such as image
 size, dropout rate, learning rate, or other parameters related to the
 Machine Learning model.
+
+- /trained\_parameters.pkl: file is a file that contains the trained parameters of the model. After the training process, the model will have weights and optimized parameters that are stored in this file. This file is used to store and restore the trained parameters of the model, allowing you to reuse the trained model without having to train it from scratch.
 
 - /result\_imagenette.txt: This file contains the evaluation results or
 performance metrics of the model on the imagenette dataset. It includes
